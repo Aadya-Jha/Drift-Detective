@@ -37,7 +37,7 @@ def calculate_psi(baseline: list, current: list, bins: int = 10) -> dict:
         severity = "high"
 
     return {
-        "psi_score": round(float(psi_score), 4),
-        "severity": severity,
-        "drift_detected": psi_score > 0.1
+    "psi_score": round(float(psi_score), 4),
+    "severity": severity,
+    "drift_detected": bool(psi_score > 0.1)
     }

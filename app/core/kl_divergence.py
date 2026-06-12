@@ -36,7 +36,7 @@ def kl_divergence(baseline: list, current: list, bins: int = 10) -> dict:
         severity = "high"
 
     return {
-        "kl_score": round(float(kl), 4),
-        "severity": severity,
-        "drift_detected": kl > 0.1
+    "kl_score": round(float(kl), 4),
+    "severity": severity,
+    "drift_detected": bool(kl > 0.1)
     }
